@@ -8,7 +8,7 @@
 
 import numpy as np
 import matplotlib
-matplotlib.use('TkAgg')  # use interactive backend
+matplotlib.use('TkAgg') 
 import matplotlib.pyplot as plt
 import matplotlib.patches as mpatches
 import matplotlib.transforms as transforms
@@ -20,16 +20,16 @@ import matplotlib.patheffects as pe
 import random, math, time, sys
 
 # ─── GAME CONSTANTS ────────────────────────────────────────────────
-W, H = 14, 10          # world units
+W, H = 14, 10        
 BASKET_W = 1.4
 BASKET_SPEED = 0.45
 EGG_RADIUS = 0.18
 DUCK_Y = 8.2
 GROUND_Y = 0.55
 FPS = 50
-LANE_XS = [-5, -2.5, 0, 2.5, 5]   # 5 duck lanes
+LANE_XS = [-5, -2.5, 0, 2.5, 5]   
 
-# Egg type config
+
 EGG_TYPES = {
     'normal': dict(color='#fffde7', outline='#f9a825', pts=1,  prob=55, label='Normal'),
     'golden': dict(color='#FFD700', outline='#FF8C00', pts=5,  prob=18, label='Golden ✨'),
@@ -56,7 +56,7 @@ def reset_game():
         eggs=[],
         particles=[],
         powerups=[],
-        active_powerups={},          # name -> expiry time
+        active_powerups={},          
         duck_wobble=[0]*5,
         duck_dir=[1]*5,
         egg_timer=0,
@@ -64,7 +64,7 @@ def reset_game():
         freeze_timer=0,
         paused=False,
         game_over=False,
-        messages=[],                 # floating text messages
+        messages=[],                 
         bg_hue=0.0,
         streak_flash=0,
         total_eggs_caught=0,
